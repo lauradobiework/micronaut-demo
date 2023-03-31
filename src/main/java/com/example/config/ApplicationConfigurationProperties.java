@@ -1,4 +1,4 @@
-package com.example;
+package com.example.config;
 
 import io.micronaut.context.annotation.ConfigurationProperties;
 

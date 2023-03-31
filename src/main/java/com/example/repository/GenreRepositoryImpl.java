@@ -1,5 +1,6 @@
-package com.example;
+package com.example.repository;
 
+import com.example.config.ApplicationConfiguration;
 import com.example.domain.Genre;
 import io.micronaut.transaction.annotation.ReadOnly;
 import jakarta.inject.Singleton;

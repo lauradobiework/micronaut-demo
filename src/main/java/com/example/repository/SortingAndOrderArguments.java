@@ -1,4 +1,4 @@
-package com.example;
+package com.example.repository;
 
 import io.micronaut.core.annotation.Nullable;
 import io.micronaut.serde.annotation.Serdeable;

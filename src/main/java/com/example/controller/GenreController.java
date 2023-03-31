@@ -1,5 +1,9 @@
-package com.example;
+package com.example.controller;
 
+import com.example.repository.GenreRepository;
+import com.example.repository.GenreSaveCommand;
+import com.example.repository.GenreUpdateCommand;
+import com.example.repository.SortingAndOrderArguments;
 import com.example.domain.Genre;
 import io.micronaut.http.HttpResponse;
 import io.micronaut.http.annotation.Body;

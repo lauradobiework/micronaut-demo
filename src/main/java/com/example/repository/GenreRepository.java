@@ -1,4 +1,4 @@
-package com.example;
+package com.example.repository;
 
 import com.example.domain.Genre;
 

@@ -1,6 +1,8 @@
 package com.example;
 
 import com.example.domain.Genre;
+import com.example.repository.GenreSaveCommand;
+import com.example.repository.GenreUpdateCommand;
 import io.micronaut.core.type.Argument;
 import io.micronaut.http.HttpRequest;
 import io.micronaut.http.HttpResponse;
