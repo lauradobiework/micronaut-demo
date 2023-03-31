@@ -1,5 +1,6 @@
 package com.example.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import io.micronaut.serde.annotation.Serdeable;
 
 import javax.persistence.*;
@@ -24,6 +25,8 @@ public class Book {
     private String isbn;
 
     @ManyToOne
+    @JoinColumn(name = "genre_id", nullable = false)
+    @JsonIgnoreProperties
     private Genre genre;
 
     public Book() {}

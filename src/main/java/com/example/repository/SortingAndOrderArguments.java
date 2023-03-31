@@ -19,7 +19,7 @@ public class SortingAndOrderArguments {
     private Integer max;
 
     @Nullable
-    @Pattern(regexp = "id|name")
+    @Pattern(regexp = "id|name|isbn|genre")
     private String sort;
 
     @Nullable
