@@ -31,11 +31,11 @@ public class Book {
 
     public Book() {}
 
-    public Book(@NotNull String isbn,
-                @NotNull String name,
+    public Book(@NotNull String name,
+                @NotNull String isbn,
                 Genre genre) {
-        this.isbn = isbn;
         this.name = name;
+        this.isbn = isbn;
         this.genre = genre;
     }
 
