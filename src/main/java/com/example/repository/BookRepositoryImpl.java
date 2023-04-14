@@ -19,7 +19,7 @@ import java.util.Optional;
 @Singleton
 public class BookRepositoryImpl implements BookRepository{
 
-    private static final List<String> VALID_PROPERTY_NAMES = Arrays.asList("id", "name", "isbn","genre");
+    private static final List<String> VALID_PROPERTY_NAMES = Arrays.asList("id", "title", "isbn","genre");
     private final EntityManager entityManager;
     private final ApplicationConfiguration applicationConfiguration;
 
@@ -68,9 +68,9 @@ public class BookRepositoryImpl implements BookRepository{
     }
 
     @Override
-    public int update(long id, @NotBlank String name, @NotBlank String isbn, Genre genre) {
-        return entityManager.createQuery("UPDATE Book b SET name = :name, isbn = :isbn, genre = :genre where id = :id")
-                .setParameter("name", name)
+    public int update(long id, @NotBlank String title, @NotBlank String isbn, Genre genre) {
+        return entityManager.createQuery("UPDATE Book b SET title = :title, isbn = :isbn, genre = :genre where id = :id")
+                .setParameter("title", title)
                 .setParameter("id", id)
                 .setParameter("isbn", isbn)
                 .setParameter("genre", genre)

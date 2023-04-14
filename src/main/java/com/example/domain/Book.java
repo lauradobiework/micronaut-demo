@@ -17,8 +17,8 @@ public class Book {
     private Long id;
 
     @NotNull
-    @Column(name = "name", nullable = false)
-    private String name;
+    @Column(name = "title", nullable = false)
+    private String title;
 
     @NotNull
     @Column(name = "isbn", nullable = false)
@@ -31,10 +31,10 @@ public class Book {
 
     public Book() {}
 
-    public Book(@NotNull String name,
+    public Book(@NotNull String title,
                 @NotNull String isbn,
                 Genre genre) {
-        this.name = name;
+        this.title = title;
         this.isbn = isbn;
         this.genre = genre;
     }
@@ -47,12 +47,12 @@ public class Book {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getTitle() {
+        return title;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setName(String title) {
+        this.title = title;
     }
 
     public String getIsbn() {
@@ -75,7 +75,7 @@ public class Book {
     public String toString() {
         return "Book{" +
                 "id=" + id +
-                ", name='" + name + '\'' +
+                ", title='" + title + '\'' +
                 ", isbn='" + isbn + '\'' +
                 ", genre=" + genre +
                 '}';

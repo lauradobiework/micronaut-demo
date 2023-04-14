@@ -8,23 +8,23 @@ import javax.validation.constraints.NotBlank;
 public class BookSaveCommand {
 
     @NotBlank
-    String name;
+    String title;
     @NotBlank
     private String isbn;
     private Genre genre;
 
-    public BookSaveCommand(String name, String isbn, Genre genre) {
-        this.name = name;
+    public BookSaveCommand(String title, String isbn, Genre genre) {
+        this.title = title;
         this.isbn = isbn;
         this.genre = genre;
     }
 
-    public String getName() {
-        return name;
+    public String getTitle() {
+        return title;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setTitle(String title) {
+        this.title = title;
     }
 
     public String getIsbn() {
