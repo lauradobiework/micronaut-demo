@@ -18,7 +18,7 @@ public interface BookRepository {
 
     void deleteById(long id);
 
-    List<Book> findAll(@NotNull SortingAndOrderArguments args);
+    List<Book> findAll(@NotNull BookSortingAndOrderArguments args);
 
     int update(long id, @NotBlank String name, @NotBlank String isbn, Genre genre);
 }

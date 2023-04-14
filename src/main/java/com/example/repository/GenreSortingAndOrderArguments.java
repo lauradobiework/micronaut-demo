@@ -9,7 +9,7 @@ import javax.validation.constraints.PositiveOrZero;
 import java.util.Optional;
 
 @Serdeable
-public class SortingAndOrderArguments {
+public class GenreSortingAndOrderArguments {
     @Nullable
     @PositiveOrZero
     private Integer offset;
@@ -19,14 +19,14 @@ public class SortingAndOrderArguments {
     private Integer max;
 
     @Nullable
-    @Pattern(regexp = "id|name|isbn|genre")
+    @Pattern(regexp = "id|name")
     private String sort;
 
     @Nullable
     @Pattern(regexp = "asc|ASC|desc|DESC")
     private String order;
 
-    public SortingAndOrderArguments(@Nullable Integer offset, @Nullable Integer max, @Nullable String sort, @Nullable String order) {
+    public GenreSortingAndOrderArguments(@Nullable Integer offset, @Nullable Integer max, @Nullable String sort, @Nullable String order) {
         this.offset = offset;
         this.max = max;
         this.sort = sort;

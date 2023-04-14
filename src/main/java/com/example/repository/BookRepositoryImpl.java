@@ -36,15 +36,15 @@ public class BookRepositoryImpl implements BookRepository{
 
     @Override
     @Transactional
-    public Book save(@NotBlank String name, @NotBlank String isbn, Genre genre) {
-        Book book = new Book(name, isbn, genre);
+    public Book save(@NotBlank String title, @NotBlank String isbn, Genre genre) {
+        Book book = new Book(title, isbn, genre);
         entityManager.persist(book);
         return book;
     }
 
     @Override
-    public Book saveWithException(@NotBlank String name, @NotBlank String isbn, Genre genre) {
-        save(name, isbn, genre);
+    public Book saveWithException(@NotBlank String title, @NotBlank String isbn, Genre genre) {
+        save(title, isbn, genre);
         throw new PersistenceException();
     }
 
@@ -55,7 +55,7 @@ public class BookRepositoryImpl implements BookRepository{
     }
 
     @ReadOnly
-    public List<Book> findAll(@NotNull SortingAndOrderArguments args) {
+    public List<Book> findAll(@NotNull BookSortingAndOrderArguments args) {
         String qlString = "SELECT b FROM Book as b";
         if (args.getOrder().isPresent() && args.getSort().isPresent() && VALID_PROPERTY_NAMES.contains(args.getSort().get())) {
             qlString += " ORDER BY b." + args.getSort().get() + ' ' + args.getOrder().get().toLowerCase();

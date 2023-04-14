@@ -3,7 +3,7 @@ package com.example.controller;
 import com.example.repository.GenreRepository;
 import com.example.repository.GenreSaveCommand;
 import com.example.repository.GenreUpdateCommand;
-import com.example.repository.SortingAndOrderArguments;
+import com.example.repository.GenreSortingAndOrderArguments;
 import com.example.domain.Genre;
 import io.micronaut.http.HttpResponse;
 import io.micronaut.http.annotation.Body;
@@ -48,7 +48,7 @@ public class GenreController {
     }
 
     @Get(value = "/list{?args*}")
-    List<Genre> list(@Valid SortingAndOrderArguments args) {
+    List<Genre> list(@Valid GenreSortingAndOrderArguments args) {
         return genreRepository.findAll(args);
     }
 

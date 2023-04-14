@@ -16,7 +16,7 @@ public interface GenreRepository {
 
     void deleteById(long id);
 
-    List<Genre> findAll(@NotNull SortingAndOrderArguments args);
+    List<Genre> findAll(@NotNull GenreSortingAndOrderArguments args);
 
     int update(long id, @NotBlank String name);
 }

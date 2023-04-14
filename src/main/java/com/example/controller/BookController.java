@@ -45,7 +45,7 @@ public class BookController {
     }
 
     @Get(value = "/list{?args*}")
-    List<Book> list(@Valid SortingAndOrderArguments args) {
+    List<Book> list(@Valid BookSortingAndOrderArguments args) {
         return bookRepository.findAll(args);
     }
 

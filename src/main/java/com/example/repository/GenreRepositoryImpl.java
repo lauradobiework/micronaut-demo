@@ -54,7 +54,7 @@ public class GenreRepositoryImpl implements GenreRepository{
 
     @Override
     @ReadOnly
-    public List<Genre> findAll(SortingAndOrderArguments args) {
+    public List<Genre> findAll(GenreSortingAndOrderArguments args) {
         String qlString = "SELECT g FROM Genre as g";
         if (args.getOrder().isPresent() && args.getSort().isPresent() && VALID_PROPERTY_NAMES.contains(args.getSort().get())) {
             qlString += " ORDER BY g." + args.getSort().get() + ' ' + args.getOrder().get().toLowerCase();
